@@ -121,7 +121,7 @@ include_once 'connect.php';
                   <?php
                   $sql = mysqli_query($conn, "SELECT * FROM `inovice`");
                   $count=mysqli_num_rows($sql);
-                  echo $count;
+                  
                   ?>
                   <tr>
                     <?php
@@ -156,8 +156,7 @@ include_once 'connect.php';
                     $cust_id = $row['cust_id'];
                     $currency = $row['currency'];
                     $date = $row['date'];
-                    echo $id;
-
+                    
                     $sql1 = mysqli_query($conn, "SELECT cust_name,cust_email FROM `customer`WHERE cust_id=".$cust_id."");
                       while($co = mysqli_fetch_assoc($sql1)) {
                         $cust_name = $co['cust_name'];
